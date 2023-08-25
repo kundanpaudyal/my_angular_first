@@ -1,4 +1,6 @@
-import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { Component, EventEmitter, Input, Output, TemplateRef } from '@angular/core';
+import { BsModalRef, BsModalService } from 'ngx-bootstrap/modal';
+
 
 @Component({
   selector: 'app-root',
@@ -8,26 +10,16 @@ import { Component, EventEmitter, Input, Output } from '@angular/core';
 
 
 export class AppComponent {
-  
 
   title = 'my_app';
-  username = "Hello"
-  newuser = "Kundan"
- 
-  lgbtnclick(event: any){
-    
-    alert(this.username)
-    console.log(this.username)
-    console.log(event.target.value)
- }
- onKey(event: any) {
-  // throw new Error('Method not implemented.');
-  console.log(event.target.value)
+  input1: string = "";
+  input2: string = "";
+  result: string = "";
+
+  public addme() {
+    this.result = String(Number(this.input1) + Number(this.input2));
   }
-
-  clearValue(){
-    this.newuser = ""
-  }
-
-
+  // onKey(event: any) {
+  //   console.log(event.target.value)
 }
+
