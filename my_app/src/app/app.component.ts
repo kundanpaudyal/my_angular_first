@@ -1,5 +1,4 @@
-import { Component, EventEmitter, Input, Output, TemplateRef } from '@angular/core';
-import { BsModalRef, BsModalService } from 'ngx-bootstrap/modal';
+import { Component} from '@angular/core';
 
 
 @Component({
